@@ -11,18 +11,15 @@ const ChatBot = () => {
 
   useEffect(() => {
     if (prefilledMessage && isOpen) {
-      setInputValue(prefilledMessage);
+      // Immediately send the prefilled message without showing typing
+      setMessages(prev => [...prev, { type: 'user', text: prefilledMessage }]);
+      
       setTimeout(() => {
-        setMessages(prev => [...prev, { type: 'user', text: prefilledMessage }]);
-        setInputValue('');
-        
-        setTimeout(() => {
-          setMessages(prev => [...prev, {
-            type: 'bot',
-            text: 'Thanks for your message! Our team will get back to you shortly. In the meantime, feel free to explore our services or book a call with our experts.'
-          }]);
-        }, 1000);
-      }, 500);
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: 'Thanks for your message! Our team will get back to you shortly. In the meantime, feel free to explore our services or book a call with our experts.'
+        }]);
+      }, 1000);
     }
   }, [prefilledMessage, isOpen]);
 
@@ -44,7 +41,7 @@ const ChatBot = () => {
     <>
       {/* Chat Widget */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-96 bg-black/80 border border-white/20 rounded-xl backdrop-blur-md z-50 flex flex-col page-transition-enter page-transition-enter-active">
+        <div className="fixed bottom-24 right-6 w-80 h-96 bg-black/80 border border-white/20 rounded-xl backdrop-blur-md z-50 flex flex-col chatbot-enter chatbot-enter-active">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center">

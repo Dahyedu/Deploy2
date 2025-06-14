@@ -113,6 +113,9 @@ const SpecServices = () => {
   };
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     // Set up intersection observer for scroll animations with improved performance
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -153,13 +156,13 @@ const SpecServices = () => {
           <Navigation />
           <main>
             {/* Hero Section */}
-            <section className="pt-32 pb-8 relative">
+            <section className="pt-32 pb-16 relative">
               <div className="container mx-auto px-6 text-center relative z-10">
                 <div className="hero-headline">
                   <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
                     <span className="dynamic-gradient-text">Specific Niche Services</span>
                   </h1>
-                  <p className="hero-subtitle text-lg font-light text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed tracking-wide">
+                  <p className="hero-subtitle text-lg font-light text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
                     Industry-focused AI solutions tailored to meet the unique challenges and opportunities of your specific sector.
                   </p>
                 </div>
@@ -171,16 +174,16 @@ const SpecServices = () => {
               <div className="container mx-auto px-6 relative z-10">
                 <div className="animate-on-scroll max-w-4xl mx-auto">
                   {/* Niche Selector */}
-                  <div className="relative bg-black/20 backdrop-blur-sm rounded-full p-2 border border-white/10 mb-12">
+                  <div className="relative bg-black/20 backdrop-blur-sm rounded-full p-3 border border-white/10 mb-12">
                     <div className="flex relative">
                       {/* Moving indicator */}
                       <div 
-                        className="absolute top-2 bottom-2 bg-white rounded-full transition-all duration-300 ease-in-out"
+                        className="absolute top-3 bottom-3 bg-white rounded-full transition-all duration-300 ease-in-out niche-selector-glow"
                         style={{
                           left: `${getIndicatorPosition()}%`,
                           width: `${100 / niches.length}%`,
-                          transform: 'translateX(4px)',
-                          right: '4px'
+                          transform: 'translateX(6px)',
+                          right: '6px'
                         }}
                       />
                       {niches.map((niche, index) => (
@@ -189,7 +192,7 @@ const SpecServices = () => {
                           onClick={() => handleNicheChange(niche)}
                           onMouseEnter={() => setHoveredNiche(niche)}
                           onMouseLeave={() => setHoveredNiche(null)}
-                          className={`relative z-10 flex-1 py-3 px-6 text-sm font-normal tracking-wide transition-all duration-300 rounded-full ${
+                          className={`relative z-10 flex-1 py-4 px-6 text-sm font-bold tracking-wide transition-all duration-300 rounded-full ${
                             (hoveredNiche === niche || (hoveredNiche === null && selectedNiche === niche)) 
                               ? 'text-black' 
                               : 'text-white'
@@ -205,7 +208,7 @@ const SpecServices = () => {
                   <div className="grid md:grid-cols-3 gap-8">
                     {nicheContent[selectedNiche as keyof typeof nicheContent].map((service, index) => (
                       <div
-                        key={`${selectedNiche}-${index}`}
+                        key={`${selectedNiche}-${service.title}-${index}`}
                         className={`animate-on-scroll feature-card bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm p-8 hover:bg-white/10 group stagger-${index + 1}`}
                       >
                         <div className="w-16 h-16 dynamic-gradient-icon rounded-lg flex items-center justify-center mb-6 feature-icon">

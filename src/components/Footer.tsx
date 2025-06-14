@@ -23,27 +23,27 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6 tracking-wide">Pages</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 rounded hover:bg-blue-400/10 block">
+                <a href="#home" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 px-2 rounded hover:bg-white/5 block">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 rounded hover:bg-blue-400/10 block">
+                <a href="#about" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 px-2 rounded hover:bg-white/5 block">
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 rounded hover:bg-blue-400/10 block">
+                <a href="#services" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 px-2 rounded hover:bg-white/5 block">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 rounded hover:bg-blue-400/10 block">
+                <a href="#contact" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 px-2 rounded hover:bg-white/5 block">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#faq" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 rounded hover:bg-blue-400/10 block">
+                <a href="#faq" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative py-1 px-2 rounded hover:bg-white/5 block">
                   FAQ
                 </a>
               </li>
@@ -55,17 +55,17 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6 tracking-wide">Social</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide block">
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide py-1 px-2 rounded hover:bg-white/5 block">
                   Twitter (X)
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide block">
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide py-1 px-2 rounded hover:bg-white/5 block">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide block">
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide py-1 px-2 rounded hover:bg-white/5 block">
                   LinkedIn
                 </a>
               </li>
@@ -81,7 +81,7 @@ const Footer = () => {
                 placeholder="Enter Your Email..."
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-all duration-300 font-light"
               />
-              <button className="px-8 py-4 bg-gradient-to-r from-[#0052D4]/20 via-[#4364F7]/20 to-[#6FB1FC]/20 border border-[#4364F7]/30 rounded-lg backdrop-blur-sm tracking-wide hover:from-[#0052D4]/30 hover:via-[#4364F7]/30 hover:to-[#6FB1FC]/30 transition-all duration-300 text-white font-normal">
+              <button className="premium-button px-8 py-4 bg-gradient-to-r from-[#0052D4]/20 via-[#4364F7]/20 to-[#6FB1FC]/20 border border-[#4364F7]/30 rounded-lg backdrop-blur-sm tracking-wide hover:from-[#0052D4]/30 hover:via-[#4364F7]/30 hover:to-[#6FB1FC]/30 transition-all duration-300 text-white font-normal">
                 Subscribe
               </button>
             </div>
@@ -94,10 +94,10 @@ const Footer = () => {
             © 2024 Nilebyte
           </p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide text-sm px-2 py-1 rounded hover:bg-blue-400/10">
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide text-sm px-2 py-1 rounded hover:bg-white/5">
               Terms & Conditions
             </a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide text-sm px-2 py-1 rounded hover:bg-blue-400/10">
+            <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide text-sm px-2 py-1 rounded hover:bg-white/5">
               Privacy Policy
             </a>
           </div>

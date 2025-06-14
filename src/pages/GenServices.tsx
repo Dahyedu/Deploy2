@@ -43,6 +43,9 @@ const GenServices = () => {
   ];
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     // Set up intersection observer for scroll animations with improved performance
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -83,13 +86,13 @@ const GenServices = () => {
           <Navigation />
           <main>
             {/* Hero Section */}
-            <section className="pt-32 pb-8 relative">
+            <section className="pt-32 pb-16 relative">
               <div className="container mx-auto px-6 text-center relative z-10">
                 <div className="hero-headline">
                   <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
                     <span className="dynamic-gradient-text">General Services</span>
                   </h1>
-                  <p className="hero-subtitle text-lg font-light text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed tracking-wide">
+                  <p className="hero-subtitle text-lg font-light text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
                     Comprehensive AI solutions designed to transform your business operations and drive innovation across all sectors.
                   </p>
                 </div>
