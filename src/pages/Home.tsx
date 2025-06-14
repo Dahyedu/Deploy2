@@ -47,6 +47,9 @@ function Home() {
 
   return (
     <ChatBotProvider>
+      <div className="min-h-screen bg-[#0D0D0D] text-white overflow-x-hidden relative">
+        {/* Full website background like hero section - RESTORED */}
+
           <Navigation />
           <main>
             <Hero />
