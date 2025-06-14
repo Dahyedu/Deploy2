@@ -41,7 +41,7 @@ const ChatBot = () => {
     <>
       {/* Chat Widget */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-96 bg-black/80 border border-white/20 rounded-xl backdrop-blur-md z-50 flex flex-col chatbot-enter chatbot-enter-active">
+        <div className="fixed bottom-24 right-6 w-80 h-96 bg-black/80 border border-white/20 rounded-xl backdrop-blur-md z-50 flex flex-col animate-in duration-300 slide-in-from-bottom-4 fade-in">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center">
